@@ -1,11 +1,12 @@
 import "./App.css";
-import { Home, Navbar } from "./components/import";
+import { Footer, Home, Navbar } from "./components/import";
 
 function App() {
   return (
     <>
       <Navbar />
       <Home />
+      <Footer />
     </>
   );
 }
