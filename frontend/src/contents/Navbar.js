@@ -7,11 +7,16 @@ export const NavbarsLink = [
   {
     id: 2,
     name: "Course",
-    link: "/",
+    link: "/course",
   },
   {
     id: 3,
     name: "Teacher",
-    link: "/",
+    link: "/teacher",
+  },
+  {
+    id: 4,
+    name: "About",
+    link: "/about",
   },
 ];
