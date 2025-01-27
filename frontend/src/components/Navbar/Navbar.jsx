@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi"; // Importing icons
 import { NavbarsLink } from "../../contents/Navbar";
+import { useLocation } from "react-router-dom"; // Import useLocation to get current path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Get current path
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -11,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 w-full">
-      <div className=" flex flex-wrap items-center justify-between  p-4">
+      <div className="flex flex-wrap items-center justify-between p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             LMS
@@ -42,11 +44,13 @@ const Navbar = () => {
                 <a
                   href={item.link}
                   className={`block py-2 px-3 rounded-sm ${
-                    item.name === "Home"
-                      ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700"
-                      : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    location.pathname === item.link
+                      ? "text-blue-500" // Apply blue color for the active link
+                      : "text-white"
                   } md:p-0`}
-                  aria-current={item.name === "Home" ? "page" : undefined}
+                  aria-current={
+                    location.pathname === item.link ? "page" : undefined
+                  }
                 >
                   {item.name}
                 </a>
