@@ -1,5 +1,6 @@
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Carousel } from "../import";
+import { Carousel } from "../../components/import";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex flex-col gap-3 mt-5">
@@ -18,11 +19,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -45,11 +46,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -72,11 +73,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -99,11 +100,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -134,11 +135,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -161,11 +162,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -188,11 +189,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
@@ -215,11 +216,11 @@ const Home = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
+              <Link to="/detail/2">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                  Noteworthy technology acquisitions 2021
+                  Course Title
                 </h5>
-              </a>
+              </Link>
               <p className="mb-3 font-normal text-gray-700 ">
                 Here are the biggest enterprise technology acquisitions of 2021
                 so far, in reverse chronological order.
