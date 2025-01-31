@@ -38,21 +38,57 @@ const CourseDetails = () => {
         </li>
         <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
           Introduction
-          <button className="rounded-md bg-red-500 px-2 py-1 text-white">
-            <HiPlay size={20} />
-          </button>
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
         </li>
         <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
-          Setup Project
-          <button className="rounded-md bg-red-500 px-2 py-1 text-white">
-            <HiPlay size={20} />
-          </button>
+          Introduction
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
         </li>
         <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
-          Start with function
-          <button className="rounded-md bg-red-500 px-2 py-1 text-white">
-            <HiPlay size={20} />
-          </button>
+          Introduction
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
+        </li>
+        <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
+          Introduction
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
+        </li>
+        <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
+          Introduction
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
+        </li>
+        <li className="px-4 py-2 border-b hover:bg-gray-200 cursor-pointer flex justify-between items-center">
+          Introduction
+          <span className="flex items-center justify-center gap-2">
+            <span>1 hours</span>
+            <button className="rounded-md bg-red-500 px-2 py-1 text-white">
+              <HiPlay size={20} />
+            </button>
+          </span>
         </li>
       </ul>
 
