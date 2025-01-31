@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi"; // Importing icons
+import { HiMenu, HiX, HiChevronDown, HiChevronUp } from "react-icons/hi"; // Importing icons
 import { NavbarsLink } from "../../contents/Navbar";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation to get current path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
   const location = useLocation(); // Get current path
 
   const toggleMenu = () => {
@@ -40,20 +41,58 @@ const Navbar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {NavbarsLink.map((item) => (
-              <li key={item.id}>
-                <Link
-                  to={item.link}
-                  className={`block py-2 px-3 rounded-sm ${
-                    location.pathname === item.link
-                      ? "text-blue-500" // Apply blue color for the active link
-                      : "text-white"
-                  } md:p-0`}
-                  aria-current={
-                    location.pathname === item.link ? "page" : undefined
-                  }
-                >
-                  {item.name}
-                </Link>
+              <li key={item.id} className="relative">
+                {item.dropdown ? (
+                  // Dropdown Button with Icon
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="flex items-center gap-2 py-2 px-3 rounded-sm text-white md:p-0 focus:outline-none"
+                  >
+                    {item.name}
+                    {dropdownOpen ? (
+                      <HiChevronUp className="w-4 h-4" />
+                    ) : (
+                      <HiChevronDown className="w-4 h-4" />
+                    )}
+                  </button>
+                ) : (
+                  // Regular Link
+                  <Link
+                    to={item.link}
+                    className={`block py-2 px-3 rounded-sm ${
+                      location.pathname === item.link
+                        ? "text-blue-500"
+                        : "text-white"
+                    } md:p-0`}
+                    aria-current={
+                      location.pathname === item.link ? "page" : undefined
+                    }
+                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {/* Dropdown Menu */}
+                {item.dropdown && dropdownOpen && (
+                  <ul className="absolute left-0 mt-2 w-60 bg-white border border-gray-200 rounded-md shadow-lg ">
+                    {item.dropdown.map((subItem, index) => (
+                      <li key={index}>
+                        {/* Add horizontal line above "Something else here" */}
+                        {subItem.name === "Something else here" && (
+                          <hr className="border-gray-300 my-1" />
+                        )}
+                        <Link
+                          to={subItem.link}
+                          onClick={() => setDropdownOpen(false)}
+                          className="block px-4 py-2 text-gray-700"
+                        >
+                          {subItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

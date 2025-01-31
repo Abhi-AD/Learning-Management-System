@@ -21,12 +21,13 @@ export const NavbarsLink = [
   },
   {
     id: 5,
-    name: "Login",
-    link: "/login",
-  },
-  {
-    id: 6,
-    name: "Register",
-    link: "/register",
+    name: "Account",
+    dropdown: [
+      { id: 51, name: "Login", link: "/login" },
+      { id: 52, name: "Register", link: "/register" },
+      { id: 53, name: "Something else here", link: "/register" },
+      { id: 54, name: "Dashboard", link: "/user-dashboard" },
+      { id: 54, name: "Logout", link: "/logout" },
+    ],
   },
 ];
