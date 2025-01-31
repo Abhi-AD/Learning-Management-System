@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi"; // Importing icons
 import { NavbarsLink } from "../../contents/Navbar";
-import { useLocation } from "react-router-dom"; // Import useLocation to get current path
+import { Link, useLocation } from "react-router-dom"; // Import useLocation to get current path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,8 +41,8 @@ const Navbar = () => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {NavbarsLink.map((item) => (
               <li key={item.id}>
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   className={`block py-2 px-3 rounded-sm ${
                     location.pathname === item.link
                       ? "text-blue-500" // Apply blue color for the active link
@@ -53,7 +53,7 @@ const Navbar = () => {
                   }
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
