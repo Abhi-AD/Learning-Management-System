@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { Silderbar } from "../../import";
-const Dashboard = () => {
+const RecCourse = () => {
   return (
     <div className="container">
       <div className="grid md:grid-cols-12 grid-cols-1 h-screen bg-gray-100">
@@ -10,7 +10,7 @@ const Dashboard = () => {
 
         {/* Main Content */}
         <div className="md:col-span-9 p-8">
-          <h2 className="text-xl font-semibold mb-6">My Courses</h2>
+          <h2 className="text-xl font-semibold mb-6">Recommended Courses</h2>
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
             <table className="min-w-full">
               <thead className="bg-gray-50">
@@ -49,4 +49,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default RecCourse;

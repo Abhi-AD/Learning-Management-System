@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { Silderbar } from "../../import";
-const Dashboard = () => {
+const MyCourse = () => {
   return (
     <div className="container">
       <div className="grid md:grid-cols-12 grid-cols-1 h-screen bg-gray-100">
@@ -49,4 +49,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default MyCourse;
