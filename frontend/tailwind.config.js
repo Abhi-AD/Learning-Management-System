@@ -5,7 +5,10 @@ export default {
     extend: {},
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "2rem", // Default padding for larger screens
+        sm: "10px", // Padding for small (mobile) screens
+      },
     },
   },
   plugins: [],
