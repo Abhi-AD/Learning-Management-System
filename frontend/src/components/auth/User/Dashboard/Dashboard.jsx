@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
-import { Silderbar } from "../../import";
+import { Silderbar } from "../../../import";
 const Dashboard = () => {
   const courses = Array.from({ length: 50 }, (_, index) => ({
     name: `Course ${index + 1}`,

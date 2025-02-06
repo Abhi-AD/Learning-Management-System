@@ -1,5 +1,5 @@
-import { Silderbar } from "../../import";
-const ProfileSetting = () => {
+import { Silderbar } from "../../../import";
+const PasswordChange = () => {
   return (
     <div className="container">
       <div className="min-h-screen grid grid-cols-12  ">
@@ -8,7 +8,7 @@ const ProfileSetting = () => {
         {/* Main Content */}
         <main className="col-span-12 md:col-span-9 p-4 md:p-8">
           <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">
-            Profile Setting
+            Change Password
           </h2>
 
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -60,4 +60,4 @@ const ProfileSetting = () => {
   );
 };
 
-export default ProfileSetting;
+export default PasswordChange;

@@ -1,15 +1,19 @@
 import { useState } from "react";
-import { HiMenu, HiX, HiChevronDown, HiChevronUp } from "react-icons/hi"; // Importing icons
+import { HiMenu, HiX, HiChevronDown, HiChevronUp } from "react-icons/hi";
 import { NavbarsLink } from "../../contents/Navbar";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation to get current path
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
-  const location = useLocation(); // Get current path
+  const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleDropdown = (id) => {
+    setOpenDropdown(openDropdown === id ? null : id); // Toggle the dropdown
   };
 
   return (
@@ -43,20 +47,18 @@ const Navbar = () => {
             {NavbarsLink.map((item) => (
               <li key={item.id} className="relative">
                 {item.dropdown ? (
-                  // Dropdown Button with Icon
                   <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    onClick={() => toggleDropdown(item.id)}
                     className="flex items-center gap-2 py-2 px-3 rounded-sm text-white md:p-0 focus:outline-none"
                   >
                     {item.name}
-                    {dropdownOpen ? (
+                    {openDropdown === item.id ? (
                       <HiChevronUp className="w-4 h-4" />
                     ) : (
                       <HiChevronDown className="w-4 h-4" />
                     )}
                   </button>
                 ) : (
-                  // Regular Link
                   <Link
                     to={item.link}
                     className={`block py-2 px-3 rounded-sm ${
@@ -73,18 +75,15 @@ const Navbar = () => {
                 )}
 
                 {/* Dropdown Menu */}
-                {/* Dropdown Menu */}
-                {item.dropdown && dropdownOpen && (
-                  <ul className="absolute left-0 mt-2 w-60 bg-white border border-gray-200 rounded-md shadow-lg ">
+                {item.dropdown && openDropdown === item.id && (
+                  <ul className="absolute left-0 mt-2 w-60 bg-white border border-gray-200 rounded-md shadow-lg">
                     {item.dropdown.map((subItem, index) => (
-                      <li key={index}>
-                        {/* Add horizontal line above "Something else here" */}
-                        {subItem.name === "Something else here" && (
-                          <hr className="border-gray-300 my-1" />
-                        )}
+                      <li key={subItem.id}>
+                        {/* Add horizontal line above the 3rd item (index 2) */}
+                        {index === 2 && <hr className="border-gray-300 my-1" />}
                         <Link
                           to={subItem.link}
-                          onClick={() => setDropdownOpen(false)}
+                          onClick={() => setOpenDropdown(null)}
                           className="block px-4 py-2 text-gray-700"
                         >
                           {subItem.name}
