@@ -5,7 +5,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="md:col-span-3 bg-white p-6 shadow-lg">
+    <div className="md:col-span-3 bg-white p-6 shadow-lg col-span-12">
       <ul>
         {silderbarmenu.map((item) => (
           <li key={item.path} className="mb-4">
