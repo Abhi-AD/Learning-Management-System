@@ -1,5 +1,6 @@
-import { Silderbar } from "../../import";
-const PasswordChange = () => {
+import { Silderbar } from "../../../import";
+
+const ProfileSetting = () => {
   return (
     <div className="container">
       <div className="min-h-screen grid grid-cols-12  ">
@@ -8,7 +9,7 @@ const PasswordChange = () => {
         {/* Main Content */}
         <main className="col-span-12 md:col-span-9 p-4 md:p-8">
           <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">
-            Change Password
+            Profile Setting
           </h2>
 
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -37,12 +38,31 @@ const PasswordChange = () => {
                 </div>
                 <div className="mb-4">
                   <label className="block text-gray-700 font-medium mb-1">
+                    Profile Photo
+                  </label>
+                  <input
+                    type="file"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-medium mb-1">
                     Password
                   </label>
                   <input
                     type="password"
                     className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                     placeholder="Enter new password"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Interest
+                  </label>
+                  <input
+                    type="password"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="Enter interest"
                   />
                 </div>
                 <button
@@ -60,4 +80,4 @@ const PasswordChange = () => {
   );
 };
 
-export default PasswordChange;
+export default ProfileSetting;

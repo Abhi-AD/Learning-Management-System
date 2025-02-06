@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
-import { Silderbar } from "../../import";
-const MyCourse = () => {
+import { Silderbar } from "../../../import";
+const FavCourse = () => {
   const courses = Array.from({ length: 50 }, (_, index) => ({
     name: `Course ${index + 1}`,
     createdBy: `User ${index + 1}`,
@@ -14,7 +14,7 @@ const MyCourse = () => {
         {/* Main Content */}
         <main className="col-span-12 md:col-span-9 p-4 md:p-8">
           <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">
-            My Course
+            Fav Courses
           </h2>
 
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -59,4 +59,4 @@ const MyCourse = () => {
   );
 };
 
-export default MyCourse;
+export default FavCourse;

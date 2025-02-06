@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { silderbarmenu } from "../../../contents/silderbarmenu";
+import { silderbarmenu } from "../../../../contents/silderbarmenu";
 
 const Sidebar = () => {
   const location = useLocation();
